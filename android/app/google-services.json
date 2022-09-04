@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "499549766041",
+    "project_id": "facemedating",
+    "storage_bucket": "facemedating.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:499549766041:android:1fd3dffdd4b7bb8a4bd308",
+        "android_client_info": {
+          "package_name": "com.example.facemedating"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "499549766041-gn6rppbht9s9n81bl7pnj701g730aa86.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASddgjxicuFASaUugQBS3z4Rcj8GAFUhE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "499549766041-gn6rppbht9s9n81bl7pnj701g730aa86.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
