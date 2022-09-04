@@ -56,57 +56,56 @@ class _RequestScreenState extends State<RequestScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        shadowColor: Colors.transparent,
-        backgroundColor: Colors.transparent,
-        title: const Text('Request Screen'),
-        leading: IconButton(
-          onPressed: (() => Navigator.pop(context)),
-          icon: const Icon(Icons.arrow_back_ios_new),
+        appBar: AppBar(
+          shadowColor: Colors.transparent,
+          backgroundColor: Colors.transparent,
+          title: const Text('Request Screen'),
+          leading: IconButton(
+            onPressed: (() => Navigator.pop(context)),
+            icon: const Icon(Icons.arrow_back_ios_new),
+          ),
         ),
-      ),
-      backgroundColor: kPrimaryColor,
-      // body: ListView(
-      //   children: userData != null
-      //       ? userData!.map((data) {
-      //           return list.contains(data['uid'])
-      //               ? ListTile(
-      //                   textColor: kSecondaryColor,
-      //                   title: Text(data['name']),
-      //                   subtitle: Text(data['userName']),
-      //                   leading: const CircleAvatar(
-      //                     radius: 20.0,
-      //                     backgroundColor: Colors.white,
-      //                     foregroundImage:
-      //                         AssetImage('assets/profile/highlights/1.png'),
-      //                   ),
-      //                   trailing: SizedBox(
-      //                     width: 100,
-      //                     child: Row(
-      //                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      //                       children: [
-      //                         GestureDetector(
-      //                           onTap: () {
-      //                             deleteRequest(data['uid']);
-      //                           },
-      //                           child: const Text('delete'),
-      //                         ),
-      //                         GestureDetector(
-      //                             onTap: () {
-      //                               acceptRequest(data['uid']);
-      //                             },
-      //                             child: const Text(
-      //                               'Accept',
-      //                               style: TextStyle(color: Colors.green),
-      //                             )),
-      //                       ],
-      //                     ),
-      //                   ))
-      //               : Container();
-      //         }).toList()
-      //       : [],
-      // )
-    );
+        backgroundColor: kPrimaryColor,
+        body: ListView(
+          children: userData != null
+              ? userData!.map((data) {
+                  return list.contains(data['uid'])
+                      ? ListTile(
+                          textColor: kSecondaryColor,
+                          title: Text(data['name']),
+                          subtitle: Text(data['userName']),
+                          leading: const CircleAvatar(
+                            radius: 20.0,
+                            backgroundColor: Colors.white,
+                            foregroundImage:
+                                AssetImage('assets/profile/highlights/1.png'),
+                          ),
+                          trailing: SizedBox(
+                            width: 100,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                GestureDetector(
+                                  onTap: () {
+                                    deleteRequest(data['uid']);
+                                  },
+                                  child: const Text('delete'),
+                                ),
+                                GestureDetector(
+                                    onTap: () {
+                                      acceptRequest(data['uid']);
+                                    },
+                                    child: const Text(
+                                      'Accept',
+                                      style: TextStyle(color: Colors.green),
+                                    )),
+                              ],
+                            ),
+                          ))
+                      : Container();
+                }).toList()
+              : [],
+        ));
   }
 
   acceptRequest(uid) async {

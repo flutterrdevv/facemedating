@@ -10,48 +10,46 @@ class GroupScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kPrimaryColor,
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        shadowColor: Colors.transparent,
-        leading: IconButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          icon: const Icon(Icons.arrow_back_ios_new),
-        ),
-        actions: const [
-          Icon(Icons.search),
-          SizedBox(
-            width: 20,
+        backgroundColor: kPrimaryColor,
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          shadowColor: Colors.transparent,
+          leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: const Icon(Icons.arrow_back_ios_new),
           ),
-        ],
-        title: const Center(
-          child: Text('Groups'),
+          actions: const [
+            Icon(Icons.search),
+            SizedBox(
+              width: 20,
+            ),
+          ],
+          title: const Center(
+            child: Text('Groups'),
+          ),
         ),
-      ),
-      //body:
-      //  Center(
-      //   child: SizedBox(
-      //     height: 300,
-      //     child: Column(
-      //       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      //       children: [
-      //         CustomButton(
-      //             buttonName: 'Create Group',
-      //             function: () {
-      //               Navigator.pushNamed(context, GroupName.id);
-      //             }),
-      //         CustomButton(
-      //             buttonName: 'Grop chats',
-      //             function: () {
-      //               Navigator.pushNamed(context, GroupsScreen.id);
-      //             }),
-      //       ],
-      //     ),
-      //   ),
-      // )
-    );
+        body: Center(
+          child: SizedBox(
+            height: 300,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                CustomButton(
+                    buttonName: 'Create Group',
+                    function: () {
+                      Navigator.pushNamed(context, GroupName.id);
+                    }),
+                CustomButton(
+                    buttonName: 'Grop chats',
+                    function: () {
+                      Navigator.pushNamed(context, GroupsScreen.id);
+                    }),
+              ],
+            ),
+          ),
+        ));
   }
 }
 
